@@ -34,6 +34,20 @@ Or drop `src/index.ts` into a local plugin directory:
 
 `opencode plugin list` should then show an entry with id `guard.ssh`.
 
+## Test
+
+Unit tests for the pure matching logic (no OpenCode runtime needed):
+
+```sh
+npm test          # node --test test/guard.test.ts
+```
+
+End-to-end against a running OpenCode:
+
+1. `opencode plugin list` should show `guard.ssh`.
+2. Ask the agent to read an SSH file; the read should fail.
+3. Confirm a normal file still reads fine.
+
 ## Disable
 
 Add `-guard.ssh` to `plugins` in `opencode.jsonc`, or delete the plugin file.
