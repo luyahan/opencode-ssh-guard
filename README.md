@@ -34,6 +34,24 @@ Or drop `src/index.ts` into a local plugin directory:
 
 `opencode plugin list` should then show an entry with id `guard.ssh`.
 
+## Options
+
+Logging is off by default. Enable it per install with the object form:
+
+```jsonc
+{
+  "plugins": [
+    { "package": "opencode-ssh-guard", "options": { "log": true } }
+  ]
+}
+```
+
+- `"log": true` — log to stdout.
+- `"log": "/path/to/guard.log"` — log to stdout and append to a file.
+
+Each line is timestamped and tagged `[guard.ssh]`, with `DENY` (permission
+layer) and `BLOCK` (tool layer) entries. Logging never affects enforcement.
+
 ## Test
 
 Unit tests for the pure matching logic (no OpenCode runtime needed):
