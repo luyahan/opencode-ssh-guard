@@ -1,0 +1,22 @@
+{
+  "name": "opencode-ssh-guard",
+  "version": "0.1.0",
+  "description": "OpenCode V2 plugin that intercepts and denies reads of the user's SSH directory (~/.ssh).",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "keywords": [
+    "opencode",
+    "opencode-plugin",
+    "security",
+    "ssh"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@opencode/plugin": "latest"
+  }
+}
