@@ -23,7 +23,7 @@ Two independent layers:
 From GitHub:
 
 ```sh
-opencode plugin add 'github:<your-user>/opencode-ssh-guard'
+opencode plugin add 'github:luyahan/opencode-ssh-guard'
 ```
 
 Or drop `src/index.ts` into a local plugin directory:
